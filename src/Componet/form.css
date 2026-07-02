@@ -5,122 +5,126 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  min-height: 100vh;
-  background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-    url("../Componet/image/image\ og\ nature.avif");
-  background-size: cover;
-
-  background-position: center;
-  background-attachment: fixed;
+body{
+  background:#eef2f7;
 }
 
 .container {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  gap: 40px;
   justify-content: center;
   align-items: flex-start;
-  padding: 50px;
-  flex-wrap: wrap;
+  gap: 35px;
+  padding: 40px;
+  background: linear-gradient(rgba(20,20,20,.45), rgba(20,20,20,.45)),
+    url("../Componet/image/image og nature.jpg.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Form Card */
+
 
 .form-card {
-  width: 420px;
-  background: rgba(255,255,255,0.18);
-  backdrop-filter: blur(15px);
+  width: 400px;
+  padding: 35px;
   border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.35);
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,.3);
+  box-shadow: 0 15px 35px rgba(0,0,0,.25);
+  transition: .3s;
 }
 
-.form-title {
-  text-align: center;
-  margin-bottom: 25px;
+.form-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0,0,0,.35);
 }
 
 .form-title h2 {
+  text-align: center;
+  margin-bottom: 25px;
   color: white;
-  font-size: 28px;
+  font-size: 30px;
   letter-spacing: 1px;
 }
 
+
 .form-card input {
   width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border-radius: 10px;
   border: none;
   outline: none;
-  border-radius: 10px;
-  background: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.9);
   font-size: 15px;
   transition: .3s;
 }
 
 .form-card input:focus {
-  background: white;
   transform: scale(1.02);
-  box-shadow: 0 0 10px #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 113, 255, .35);
 }
+
+
 
 .form-card button {
   width: 100%;
   padding: 14px;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(45deg,#00c853,#64dd17);
+  background: linear-gradient(45deg,#46e561,#3bf65a);
   color: white;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 17px;
+  font-weight: 600;
   cursor: pointer;
   transition: .3s;
 }
 
 .form-card button:hover {
   transform: translateY(-2px);
-  background: linear-gradient(45deg,#00e676,#43a047);
+  box-shadow: 0 10px 20px rgba(89, 241, 97, 0.4);
 }
 
-/* Table */
+
 
 .student-table {
-  width: 900px;
+  min-width: 780px;
   border-collapse: collapse;
-  background: rgba(255,255,255,.15);
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  border-radius: 15px;
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 15px 35px rgba(0,0,0,.2);
 }
 
-.student-table th {
-  background: rgba(0,100,0,.8);
+.student-table thead {
+  background: linear-gradient(45deg,#55f585,#b4ecae);
   color: white;
-  padding: 15px;
-  font-size: 15px;
 }
 
+.student-table th,
 .student-table td {
-  color: white;
-  padding: 14px;
+  padding: 15px 20px;
   text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,.15);
 }
 
-.student-table tr:nth-child(even) {
-  background: rgba(255,255,255,.05);
+.student-table tbody tr:nth-child(even) {
+  background: #f8f9ff;
 }
 
-.student-table tr:hover {
-  background: rgba(255,255,255,.15);
+.student-table tbody tr {
   transition: .3s;
 }
 
-/* Buttons */
+.student-table tbody tr:hover {
+  background: #e9f2ff;
+  transform: scale(1.01);
+}
+
+
 
 .table-actions {
   display: flex;
@@ -129,57 +133,52 @@ body {
 }
 
 .table-actions button {
+  padding: 10px 16px;
   border: none;
-  padding: 8px 15px;
   border-radius: 8px;
   color: white;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: bold;
   transition: .3s;
 }
 
 .table-actions button:first-child {
-  background: #1976d2;
+  background: linear-gradient(45deg,#10b981,#059669);
 }
 
 .table-actions button:first-child:hover {
-  background: #1565c0;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(16,185,129,.4);
 }
 
 .table-actions button:last-child {
-  background: #e53935;
+  background: linear-gradient(45deg,#ef4444,#dc2626);
 }
 
 .table-actions button:last-child:hover {
-  background: #c62828;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(239,68,68,.4);
 }
 
-/* Responsive */
 
-@media (max-width:1200px) {
-  .student-table {
-    width: 100%;
-    overflow-x: auto;
-    display: block;
-  }
-}
 
-@media (max-width:768px) {
+@media (max-width: 1100px) {
 
-  .container {
-    padding: 20px;
+  .container{
+      flex-direction: column;
+      align-items: center;
   }
 
-  .form-card {
-    width: 100%;
+  .student-table{
+      width:100%;
+      min-width:100%;
+      overflow-x:auto;
+      display:block;
   }
 
-  .student-table {
-    font-size: 13px;
+  .form-card{
+      width:100%;
+      max-width:450px;
   }
 
-  .student-table th,
-  .student-table td {
-    padding: 10px;
-  }
 }
