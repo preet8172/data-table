@@ -89,6 +89,50 @@ body{
   box-shadow: 0 10px 20px rgba(89, 241, 97, 0.4);
 }
 
+/* Search bar styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  width: 400px;
+  max-width: 90%;
+  justify-content:space-evenly;
+  align-self: center;
+  text-align: center;
+}
+
+.search-bar input {
+  flex: 1 1 auto;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: rgba(255,255,255,0.95);
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow .18s ease, transform .12s ease;
+}
+
+.search-bar input:focus {
+  box-shadow: 0 6px 18px rgba(76,113,255,.12);
+  transform: translateY(-1px);
+}
+
+.search-bar button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg,#6b7280,#374151);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.search-bar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(55,65,81,.18);
+}
+
 
 
 .student-table {
