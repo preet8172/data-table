@@ -7,7 +7,10 @@ function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
+  const [hobby ,setHobby] = useState("");
+  const [youridealperson , setYouridealperson] = useState("");
   const [course, setCourse] = useState("");
+  const [gender, setGender] = useState("");
   const [prize, setPrize] = useState("");
   const [phone, setPhone] = useState("");
   const [branch, setBranch] = useState("");
@@ -52,6 +55,9 @@ function Form() {
     setName("");
     setEmail("");
     setAge("");
+    setHobby("");
+    setYouridealperson("");
+    setGender("");
     setCourse("");
     setPrize("");
     setPhone("");
@@ -68,6 +74,9 @@ function Form() {
       name: name,
       email: email,
       age: age,
+      hobby: hobby,
+      youridealperson: youridealperson,
+      gender:gender,
       course: course,
       prize: prize,
       phone: phone,
@@ -99,6 +108,9 @@ function Form() {
     setName(student.name);
     setEmail(student.email);
     setAge(student.age);
+    setHobby(student.hobby);
+    setYouridealperson(student.youridealperson);
+    setGender(student.gender);
     setCourse(student.course);
     setPrize(student.prize);
     setPhone(student.phone);
@@ -153,6 +165,24 @@ function Form() {
             placeholder="enter your age"
             value={age}
             onChange={(e) => setAge(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="enter your hobby"
+            value={hobby}
+            onChange={(e) => setHobby(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="enter your ideal person"
+            value={youridealperson}
+            onChange={(e) => setAge(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="enter your gender"
+            value={gender}
+            onChange={(e) => setGender(e.target.value)}
           />
           <input
             type="text"
@@ -212,6 +242,9 @@ function Form() {
               <th>name</th>
               <th>email</th>
               <th>age</th>
+              <th>hobby</th>
+              <th>youridealperson</th>
+              <th>gender</th>
               <th>course</th>
               <th>prize</th>
               <th>phone</th>
@@ -230,6 +263,9 @@ function Form() {
                   <td>{student.name}</td>
                   <td>{student.email}</td>
                   <td>{student.age}</td>
+                  <td>{student.hobby}</td>
+                  <td>{student.youridealperson}</td>
+                  <td>{student.gender}</td>
                   <td>{student.course}</td>
                   <td>{student.prize}</td>
                   <td>{student.phone}</td>
